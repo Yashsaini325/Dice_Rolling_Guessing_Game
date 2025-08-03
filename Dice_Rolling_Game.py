@@ -6,9 +6,15 @@ def Dice_Rolling_Game():
     while (True):
         print("****************✨  (Welcome to Dice Rolling Game) ✨ ****************")
         choose_1 = input("Want to play this game (Yes/No)🙂 : ").title()
+        while (choose_1 != 'Yes' and choose_1 != 'No'):
+            print("Invalid Choice, please enter (Yes / No) !!")
+            choose_1 = input("Want to play this game (Yes/No)🙂 : ").title()
         if (choose_1 == "Yes"):
             time.sleep(2)
             dice_option = input("Press (D) to roll a dice🙂 : ").capitalize()
+            while (dice_option != 'D'):
+                print("Invalid , please enter (D) to roll the dice !!")
+                dice_option = input("Press (D) to roll a dice🙂 : ").capitalize()
             if (dice_option == "D"):
                 Dice_Rolled = random.randint(1,6)
                 time.sleep(2)
